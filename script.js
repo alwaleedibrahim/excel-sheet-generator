@@ -4,7 +4,14 @@ columns = document.getElementsByClassName("columns")[0]
 tableExists = false
 
 const generateTable = () => {
-    let rowsNumber = parseInt(rows.value), columnsNumber = parseInt(columns.value)
+    if (!rows.value || !columns.value) {
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Cannot generate table. Please check you inputs!"
+          });
+    }
+    let rowsNumber = parseInt(rows.value), columnsNumber = parseInt(columns.value);
     table.innerHTML = ""
     for(let i=0; i<rowsNumber; i++){
         var tableRow = ""
@@ -20,6 +27,11 @@ const generateTable = () => {
 
 const ExportToExcel = (type, fn, dl) => {
     if(!tableExists){
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Cannot export table. Please generate table first!"
+        });
         return
     }
     var elt = table
