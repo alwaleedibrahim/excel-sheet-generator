@@ -1,7 +1,9 @@
 # excel-sheet-generator
 
-hello there, your task is to use sweetalert.js to display an alert when the user clicks "generate" while the fields are empty, and when the user clicks "export" but there is no generated table to be exported.
+## Overview
+This repository contains a simple web application for generating and exporting HTML tables to Excel. In this fork, SweetAlert error messages have been added to improve the user experience by providing clear and friendly error notifications.
 
-fork the repository and start working on it.
-
-best of luck.
+## Features
+- **Table Generation:** Allows users to create a table with a specified number of rows and columns.
+- **Export to Excel:** Exports the generated table to an Excel file.
+- **SweetAlert Error Messages:** Provides user-friendly error messages for invalid inputs and actions.
